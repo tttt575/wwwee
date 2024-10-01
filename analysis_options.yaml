@@ -1,0 +1,36 @@
+# هذا الملف يُهيّئ المحلل، الذي يُحلل كود Dart بشكل ثابت للتحقق من الأخطاء، التحذيرات، والقواعد.
+
+# يتم عرض المشكلات التي يحددها المحلل في واجهة المستخدم لـ IDEs المدعومة بـ Dart
+# (https://dart.dev/tools#ides-and-editors). يمكن أيضًا استدعاء المحلل من سطر الأوامر
+# عن طريق تشغيل `flutter analyze`.
+
+# السطر التالي يُفعّل مجموعة من القواعد الموصى بها لتطبيقات Flutter،
+# الحزم، والإضافات المصممة لتشجيع ممارسات البرمجة الجيدة.
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  # يمكن تخصيص قواعد التدقيق المطبقة على هذا المشروع في
+  # القسم أدناه لتعطيل القواعد من `package:flutter_lints/flutter.yaml`
+  # المضمنة أعلاه أو لتمكين قواعد إضافية. قائمة بجميع القواعد المتاحة
+  # ومواردها موجودة على https://dart.dev/lints.
+  #
+  # بدلاً من تعطيل قاعدة تدقيق لمشروع كامل في
+  # القسم أدناه، يمكن أيضًا كتمها لخط واحد محدد
+  # أو ملف Dart معين باستخدام `// ignore: name_of_lint` و
+  # `// ignore_for_file: name_of_lint` على السطر أو في الملف
+  # الذي ينتج lint.
+  # rules:
+    # avoid_print: false  # قم بإلغاء تعليق هذا لتعطيل قاعدة `avoid_print`
+    # prefer_single_quotes: true  # قم بإلغاء تعليق هذا لتمكين قاعدة `prefer_single_quotes`
+
+# معلومات إضافية حول هذا الملف يمكن العثور عليها في
+# https://dart.dev/guides/language/analysis-options
+
+# قسم التبعيات يجب أن يكون هنا
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_auth: ^3.3.3
+analyzer:
+  errors:
+    use_build_context_synchronously: ignore
